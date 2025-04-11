@@ -1,0 +1,6 @@
+pandas==2.2.3
+numpy==2.2.4
+textdistance==4.6.3
+keras==3.9.2
+keras_preprocessing==1.1.2
+regex==2024.11.6

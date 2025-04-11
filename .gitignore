@@ -1,0 +1,9 @@
+bin/*
+docx-template/*
+include/*
+lib/*
+lib64/*
+share/*
+src/__pycache__/*
+*.code-workspace
+pyvenv.cfg
