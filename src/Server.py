@@ -12,12 +12,16 @@ class ThreadedTCPHandler(socketserver.BaseRequestHandler):
         print("Client connected")
         data: dict[str, str] = json.loads(self.request.recv(4294967296).decode('utf-8'))
         predictions = []
-        if data["words"][-1] in " .,:;!?-":
+        mode = ""
+        if data["words"][-1] in " .,:;!?-\n":
+            mode = "prediction"
             predictions = predictor.predict(data["words"], 3)
         else:
+            mode = "correction"
             words = data["words"].rsplit(" ", 1)
             predictions = autocorrect.correct(words[-1])
         response: dict = {
+            "mode": mode,
             "word1": predictions[0],
             "word2": predictions[1],
             "word3": predictions[2]
