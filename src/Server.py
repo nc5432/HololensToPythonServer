@@ -1,3 +1,5 @@
+# Written by Nolan Casey, 2025
+
 import socketserver, threading, json
 from WordPrediction import WordPrediction
 from Autocorrect import Autocorrect

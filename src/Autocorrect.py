@@ -1,3 +1,5 @@
+# https://predictivehacks.com/how-to-build-an-autocorrect-in-python/
+
 import pandas as pd
 import numpy as np
 from collections import Counter

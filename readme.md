@@ -7,3 +7,8 @@ This is a rudimentary word prediction and autocorrect server intended for use wi
 ```pip install -r requirements.txt```
    - (Optional) If you intend to train a word prediction model, you will need to edit a bit of included module code. On line 31 of WordPrediction.py, we use pad_sequences(). This comes from the keras_preprocessing.sequence module and includes outdated numpy code. Open sequence.py, most easily accessed by right clicking on pad_sequences() in an IDE like Visual Studio or VSCode and clicking 'Go to definition;. Here, scroll to line 79 and replace np.unicode_ with np.str_.
 3. Run 'Server.py'. From there, the hololens can connect on port 8968.
+
+### References
+The autocorrect and prediction classes were largely based on these tutorials:
+- https://predictivehacks.com/how-to-build-an-autocorrect-in-python/
+- https://www.geeksforgeeks.org/next-word-prediction-with-deep-learning-in-nlp/

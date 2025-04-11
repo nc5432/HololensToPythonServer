@@ -4,6 +4,7 @@ include/*
 lib/*
 lib64/*
 share/*
+lib64/*
 src/__pycache__/*
 *.code-workspace
 pyvenv.cfg
